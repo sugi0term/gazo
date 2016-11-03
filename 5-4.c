@@ -1,29 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "iip.h"
 
 void
-divNxNImg(void);
+divNxNImg(int);
 
 int
 main(int argc, char **argv)
 {
-	getData();
+	if (argc < 2) {
+		fprintf(stderr, "usage: %s file [option ...]\n", argv[0]);
+		exit(EXIT_FAILURE);
+	}
+
+	getData(argv[1]);
 	rgbToYbr();
-	divNxNImg();
+	divNxNImg(atoi(argv[3]));
 	ybrToRgb();
-	putData();
+	putData(argv[2]);
 
 	return 0;
 }
 
 void
-divNxNImg(void)
+divNxNImg(int div)
 {
 	int i, j;
-	int vsp, hsp, div, x, y;
+	int vsp, hsp, x, y;
 
-	printf("division: ");
-	scanf("%d", &div);
 	hsp = ptr->biWidth / div;
 	vsp = ptr->biHeight / div;
 

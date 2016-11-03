@@ -33,7 +33,7 @@ main(void)
 
 	puts("入力されたＲＧＢ信号（整数値）＞");
 	for (i = 0; i < 3; i++) {
-		printf("%s: %3.0f\n", label[i], rgb[i]);
+		printf("%s: %3.4f\n", label[i], rgb[i]);
 	}
 	printf("\n");
 
@@ -61,7 +61,7 @@ main(void)
 	}
 	puts("変換されたＹＣｂＣｒ信号（整数値）＞");
 	for (i = 0; i < 3; i++) {
-		printf("%s: %3.0f\n", label[i], ycbcr[i]);
+		printf("%s: %3d\n", label[i], (int)ycbcr[i]);
 	}
 	printf("\n");
 
@@ -94,7 +94,6 @@ main(void)
 		printf("%s: %3d\n", label[i], (int)rgb[i]);
 	}
 	printf("\n");
-
 
 	return 0;
 }

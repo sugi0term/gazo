@@ -247,7 +247,7 @@ putData(void)
 	for (i = ptr->biHeight - 1; 0 <= i; i--) {
 		for (j = 0; j < ptr->biWidth; j++) {
 			for (k = 2; 0 <= k; k--) {
-				putc(imgin[k][i][j], fp);
+				putc(imgout[k][i][j], fp);
 			}
 		}
 	}

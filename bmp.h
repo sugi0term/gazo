@@ -1,3 +1,8 @@
+#ifndef _BMP_H_
+#define _BMP_H_
+
+#include <stdint.h>
+
 #pragma pack(2)
 typedef struct {
 	uint16_t bfType;
@@ -11,9 +16,11 @@ typedef struct {
 	uint16_t biBitCount;
 	uint32_t biCompression;
 	uint32_t biSizeImage;
-	int32_t biXPelsPerMeter;
-	int32_t biYPelsPerMeter;
+	uint32_t biXPelsPerMeter;
+	uint32_t biYPelsPerMeter;
 	uint32_t biClrUsed;
 	uint32_t biClrImportant;
 } bmp_t;
 #pragma pack()
+
+#endif
