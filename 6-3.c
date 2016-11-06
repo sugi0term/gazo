@@ -36,7 +36,7 @@ quantizeImg(int level)
 		for (i = 0; i < ptr->biWidth; i++) {
 			for (j = 0; j < ptr->biHeight; j++) {
 				if (lowerLimit <= imgin[0][i][j] && imgin[0][i][j] < upperLimit) {
-					imgout[0][i][j] = upperLimit - increment;
+					imgout[0][i][j] = upperLimit - (increment / 2);
 					imgout[1][i][j] = 128;
 					imgout[2][i][j] = 128;
 				}
