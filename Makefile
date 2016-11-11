@@ -1,6 +1,5 @@
-PROG := 5-4
+PROG := 6-4
 SRCS := $(PROG).c xfunc.c iip.c
-#SRCS := $(PROG).c xfunc.c
 OBJS := $(SRCS:%.c=%.o)
 DEPS := $(SRCS:%.c=%.d)
 

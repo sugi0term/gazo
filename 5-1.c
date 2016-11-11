@@ -6,11 +6,11 @@ flipImg(void);
 int
 main(int argc, char **argv)
 {
-	getData();
+	getData(argv[1]);
 	rgbToYbr();
 	flipImg();
 	ybrToRgb();
-	putData();
+	putData(argv[2]);
 
 	return 0;
 }

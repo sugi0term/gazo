@@ -17,8 +17,8 @@ void
 ybrToRgb(void);
 
 extern uint8_t header[HEADER_LENGTH];
-extern uint8_t imgin[3][1920][1920];
-extern uint8_t imgout[3][1920][1920];
+extern uint8_t imgin[3][2000][2000];
+extern uint8_t imgout[3][2000][2000];
 extern int alignment;
 extern bmp_t *ptr;
 
