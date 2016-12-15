@@ -1,5 +1,8 @@
-PROG := 6-4
-SRCS := $(PROG).c xfunc.c iip.c
+PART := 10
+QUES := 5
+PROG := $(PART)-$(QUES)
+SRCS := $(PROG).c $(PART).c xfunc.c iip.c
+# SRCS := $(PROG).c xfunc.c iip.c
 OBJS := $(SRCS:%.c=%.o)
 DEPS := $(SRCS:%.c=%.d)
 
@@ -21,13 +24,3 @@ run:
 
 clean:
 	rm -fr $(PROG) $(OBJS) $(DEPS)
-
-#xfunc.o: xfunc.c
-#	$(CC) -Wall -c -o xfunc.o xfunc.c -g
-#
-#$(PROG).o: $(PROG).c
-#	$(CC) -Wall -c -o $(PROG).o $(PROG).c -g
-#
-#iip.o: iip.c
-#	$(CC) -Wall -c -o iip.o iip.c -g
-
